@@ -5,6 +5,13 @@
 * https://reactnative.dev/docs/environment-setup
 * https://reactnavigation.org/docs/getting-started/
 
+## Run application
+
+```
+npm i
+npm run android
+```
+
 ## Project Structure
 
 ```
