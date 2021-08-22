@@ -17,6 +17,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import FirstScreen from './screens/FirstScreen';
+import TravelRegisterScreen from './screens/TravelRegisterScreen';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
@@ -30,9 +31,16 @@ const App = () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          initialRouteName="First"
+          screenOptions={{
+            headerShown: false,
+          }}>
           <Stack.Screen name="First" component={FirstScreen} />
-
+          <Stack.Screen
+            name="TravelRegister"
+            component={TravelRegisterScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
